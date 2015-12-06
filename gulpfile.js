@@ -5,6 +5,11 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const eslint = require('gulp-eslint');
 const webpack = require('webpack');
+const del = require('del');
+
+gulp.task('clean', (done) => {
+  del(['dist'], done);
+});
 
 gulp.task('eslint', () => {
   return gulp.src('src/**/*.js')
