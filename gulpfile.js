@@ -4,11 +4,13 @@
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const eslint = require('gulp-eslint');
+const uglify = require('gulp-uglify');
 const webpack = require('webpack');
 const del = require('del');
+const run = require('run-sequence');
 
 gulp.task('clean', (done) => {
-  del(['dist'], done);
+  del(['.tmp', 'dist'], done);
 });
 
 gulp.task('eslint', () => {
@@ -35,5 +37,14 @@ gulp.task('webpack:dev', () => {
   });
 });
 
-gulp.task('build', ['eslint', 'webpack']);
+gulp.task('uglify', () => {
+  return gulp.src('.tmp/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['eslint'], (done) => {
+  run('webpack', 'uglify', done);
+});
+
 gulp.task('default', ['webpack:dev']);
