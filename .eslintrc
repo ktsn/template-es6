@@ -23,7 +23,9 @@
       - 2
       - smart
     no-eval: 2
-    no-use-before-define: 2
+    no-use-before-define:
+      - 2
+      - nofunc
     radix:
       - 1
       - as-needed
