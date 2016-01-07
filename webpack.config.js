@@ -6,7 +6,9 @@ module.exports = {
   entry: './index.js',
   output: {
     path: __dirname + '/.tmp',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    library: 'Lib',
+    libraryTarget: 'umd'
   },
   resolve: {
     modulesDirectories: ['node_modules'],
