@@ -3,7 +3,7 @@ module.exports = {
   context: __dirname + '/src',
   entry: './index.js',
   output: {
-    path: __dirname + '/.tmp',
+    path: __dirname + '/dist',
     filename: 'bundle.js',
     library: 'Lib',
     libraryTarget: 'umd'
