@@ -1,6 +1,4 @@
 /* eslint-env node */
-'use strict';
-
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const eslint = require('gulp-eslint');

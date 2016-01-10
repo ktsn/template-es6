@@ -17,6 +17,7 @@
     restParams: true
     spread: true
     templateStrings: true
+    modules: true
   rules:
     dot-notation: 2
     eqeqeq: [2, smart]

@@ -1,6 +1,4 @@
 /* eslint-env node */
-'use strict';
-
 module.exports = {
   context: __dirname + '/src',
   entry: './index.js',
