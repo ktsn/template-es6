@@ -1,9 +1,11 @@
 /* eslint-env node */
+const path = require('path');
+
 module.exports = {
-  context: __dirname + '/src',
+  context: path.resolve(__dirname, 'src'),
   entry: './index.js',
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     library: 'Lib',
     libraryTarget: 'umd'

@@ -20,7 +20,7 @@ gulp.task('eslint', () => {
 });
 
 gulp.task('webpack', (done) => {
-  webpack(require(__dirname + '/webpack.config'), (err, stats) => {
+  webpack(require('./webpack.config'), (err, stats) => {
     if (err) throw new gutil.PluginError('webpack', err);
     gutil.log('[webpack]', stats.toString());
     done();
@@ -28,7 +28,7 @@ gulp.task('webpack', (done) => {
 });
 
 gulp.task('webpack:dev', () => {
-  const compiler = webpack(require(__dirname + '/webpack.config.dev'));
+  const compiler = webpack(require('./webpack.config.dev'));
 
   compiler.watch(200, (err, stats) => {
     if (err) throw new gutil.PluginError('webpack', err);
@@ -37,7 +37,7 @@ gulp.task('webpack:dev', () => {
 });
 
 gulp.task('webpack:test', () => {
-  const compiler = webpack(require(__dirname + '/webpack.config.test'));
+  const compiler = webpack(require('./webpack.config.test'));
 
   compiler.watch(200, (err) => {
     if (err) throw new gutil.PluginError('webpack', err);
