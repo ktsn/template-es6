@@ -11,8 +11,8 @@ const fs = require('fs');
 const del = require('del');
 const run = require('run-sequence');
 
-gulp.task('clean', (done) => {
-  del(['.tmp', 'dist'], done);
+gulp.task('clean', () => {
+  return del(['.tmp', 'dist']);
 });
 
 gulp.task('eslint', () => {
@@ -61,7 +61,7 @@ gulp.task('uglify', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', ['eslint'], (done) => {
+gulp.task('build', ['clean', 'eslint'], (done) => {
   run('webpack', 'uglify', done);
 });
 
