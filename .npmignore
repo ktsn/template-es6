@@ -1,6 +1,7 @@
 /.babelrc
 /.eslintrc
 /testem.yml
+/BANNER
 
 /gulpfile.js
 /webpack.config.js
