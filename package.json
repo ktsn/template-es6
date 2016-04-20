@@ -3,8 +3,19 @@
   "version": "1.0.0",
   "author": "katashin",
   "private": "true",
+  "description": "A project template for an ES6 library",
+  "keywords": [
+    "template",
+    "ECMAScript"
+  ],
   "license": "MIT",
+  "main": "dist/bundle.js",
   "homepage": "https://github.com/ktsn/template-es6",
+  "bugs": "https://github.com/ktsn/template-es6/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktsn/template-es6.git"
+  },
   "scripts": {
     "prepublish": "npm run build",
     "build": "NODE_ENV=production gulp build",
