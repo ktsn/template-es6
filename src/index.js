@@ -1,3 +1,3 @@
-export default {
-  // this file is the entry point of the project
-}
+// @flow
+
+export const world: string = 'Hello World!'
