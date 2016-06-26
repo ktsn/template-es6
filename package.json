@@ -17,10 +17,10 @@
     "url": "https://github.com/ktsn/template-es6.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm run flow && npm run lint && npm run build",
     "build": "NODE_ENV=production gulp build",
     "flow": "flow check",
-    "lint": "gulp eslint",
+    "lint": "eslint -c .eslintrc.yml \"src/**/*\" && eslint -c test/.eslintrc.yml \"test/**/*\"",
     "test": "gulp test",
     "test:ci": "webpack --config webpack.config.test.js && testem ci --launch Firefox,PhantomJS"
   },
@@ -33,10 +33,10 @@
     "babel-preset-power-assert": "^1.0.0",
     "babel-preset-stage-3": "^6.5.0",
     "del": "^2.2.0",
+    "eslint": "^2.13.1",
     "flow-bin": "^0.27.0",
     "glob": "^7.0.3",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
     "gulp-header": "^1.7.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
