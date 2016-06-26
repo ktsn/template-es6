@@ -1,0 +1,10 @@
+[ignore]
+.*/dist/
+.*/\.tmp/
+.*/test/
+
+[include]
+
+[libs]
+
+[options]

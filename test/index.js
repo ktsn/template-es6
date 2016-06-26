@@ -1,8 +1,8 @@
 import assert from 'power-assert'
-import index from '../src/index'
+import { world } from '../src/index'
 
 describe('Entry point', () => {
-  it('should provide module', () => {
-    assert.deepEqual(index, {})
+  it('exports world', () => {
+    assert(world === 'Hello World!')
   })
 })
