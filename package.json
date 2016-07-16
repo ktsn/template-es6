@@ -2,7 +2,7 @@
   "name": "template-es6",
   "version": "1.0.0",
   "author": "katashin",
-  "private": "true",
+  "private": true,
   "description": "A project template for an ES6 library",
   "keywords": [
     "template",
@@ -20,7 +20,7 @@
     "prepublish": "npm run flow && npm run lint && npm run build",
     "build": "NODE_ENV=production gulp build",
     "flow": "flow check",
-    "lint": "eslint -c .eslintrc.yml \"src/**/*\" && eslint -c test/.eslintrc.yml \"test/**/*\"",
+    "lint": "eslint 'src/**/*' && eslint 'test/**/*'",
     "test": "gulp test",
     "test:ci": "webpack --config webpack.config.test.js && testem ci --launch Firefox,PhantomJS"
   },
