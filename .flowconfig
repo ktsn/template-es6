@@ -2,6 +2,7 @@
 .*/dist/
 .*/\.tmp/
 .*/test/
+.*/node_modules/
 
 [include]
 
