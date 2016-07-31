@@ -38,7 +38,7 @@
     "del": "^2.2.0",
     "eslint": "^3.0.0",
     "eslint-plugin-flow-vars": "^0.5.0",
-    "flow-bin": "^0.29.0",
+    "flow-bin": "^0.30.0",
     "glob": "^7.0.3",
     "gulp": "^3.9.1",
     "gulp-header": "^1.7.1",
