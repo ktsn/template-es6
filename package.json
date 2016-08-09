@@ -29,7 +29,7 @@
     "flow": "flow check",
     "lint": "eslint \"src/**/*.js\" && eslint \"test/**/*.js\"",
     "testem": "testem",
-    "testem:ci": "testem ci --launch Firefox,PhantomJS",
+    "testem:ci": "testem ci --launch PhantomJS",
     "test": "run-p watch:test testem",
     "test:ci": "run-s build:test testem:ci",
     "release": "run-s lint flow test:ci clean build build:prod"
