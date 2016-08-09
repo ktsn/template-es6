@@ -2,7 +2,7 @@
   extends: eslint:recommended
   parser: babel-eslint
   plugins:
-    - flow-vars
+    - flowtype
   env:
     es6: true
     commonjs: true
@@ -24,5 +24,5 @@
     quotes: [1, single]
     semi: [1, never]
     strict: [2, global]
-    flow-vars/define-flow-type: 1
-    flow-vars/use-flow-type: 1
+    flowtype/define-flow-type: 1
+    flowtype/use-flow-type: 1
