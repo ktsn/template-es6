@@ -4,7 +4,6 @@ const glob = require('glob')
 
 const conf = require('./webpack.config')
 
-conf.debug = true
 conf.devtool = 'source-map'
 
 conf.context = path.resolve(__dirname)
