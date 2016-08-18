@@ -35,7 +35,7 @@
     "release": "run-s lint flow test:ci clean build build:prod"
   },
   "devDependencies": {
-    "babel-core": "^6.7.6",
+    "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-class-properties": "^6.10.2",
