@@ -9,7 +9,7 @@
     "ECMAScript"
   ],
   "license": "MIT",
-  "main": "dist/template-es6.js",
+  "main": "dist/template-es6.common.js",
   "files": [
     "dist"
   ],
@@ -26,7 +26,7 @@
     "build:test": "webpack --config scripts/webpack.config.test.js",
     "watch:test": "webpack -w --config scripts/webpack.config.test.js",
     "flow": "flow check",
-    "lint": "eslint \"@(src|test|scripts)/**/*.js\"",
+    "lint": "eslint --fix \"@(src|test|scripts)/**/*.js\"",
     "testem": "testem",
     "testem:ci": "testem ci --launch PhantomJS",
     "test": "run-p watch:test testem",
