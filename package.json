@@ -22,17 +22,16 @@
   "scripts": {
     "prepublish": "npm run release",
     "clean": "rm -rf dist .tmp",
-    "build": "webpack --config webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production npm run build",
-    "build:test": "webpack --config webpack.config.test.js",
-    "watch:test": "webpack -w --config webpack.config.test.js",
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "build:test": "webpack --config scripts/webpack.config.test.js",
+    "watch:test": "webpack -w --config scripts/webpack.config.test.js",
     "flow": "flow check",
-    "lint": "eslint \"src/**/*.js\" && eslint \"test/**/*.js\"",
+    "lint": "eslint \"@(src|test|scripts)/**/*.js\"",
     "testem": "testem",
     "testem:ci": "testem ci --launch PhantomJS",
     "test": "run-p watch:test testem",
     "test:ci": "run-s build:test testem:ci",
-    "release": "run-s lint flow test:ci clean build build:prod"
+    "release": "run-s lint flow test:ci clean build"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
