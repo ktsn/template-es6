@@ -25,6 +25,8 @@ const config = {
   ]
 }
 
+mkdirIfNotExists('dist')
+
 rollup(config)
   .then(bundle => {
     return write(bundle, `dist/${meta.name}.common.js`, {
@@ -71,6 +73,14 @@ function addPlugins(config, plugins) {
   return Object.assign({}, config, {
     plugins: config.plugins.concat(plugins)
   })
+}
+
+function mkdirIfNotExists(dirPath) {
+  try {
+    fs.statSync(dirPath)
+  } catch (error) {
+    fs.mkdirSync(dirPath)
+  }
 }
 
 function write(bundle, dest, config) {
