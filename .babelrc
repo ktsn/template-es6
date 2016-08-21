@@ -5,7 +5,7 @@
   ],
   "env": {
     "development": {
-      "presets": ["es2015", "power-assert"]
+      "presets": ["es2015-rollup", "power-assert"]
     },
     "production": {
       "presets": ["es2015-rollup"]
