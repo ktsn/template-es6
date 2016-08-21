@@ -24,7 +24,7 @@
     "clean": "rm -rf dist .tmp",
     "build": "cross-env NODE_ENV=production node scripts/build.js",
     "build:test": "rollup -c scripts/rollup.config.test.js",
-    "watch:test": "node scripts/test-dev",
+    "watch:test": "node scripts/test-dev.js",
     "flow": "flow check",
     "lint": "eslint --fix \"@(src|test|scripts)/**/*.js\"",
     "testem": "testem",
