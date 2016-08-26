@@ -1,14 +1,15 @@
 {
+  "presets": [
+    ["es2015", { "modules": false }]
+  ],
   "plugins": [
+    "external-helpers",
     "transform-flow-strip-types",
     "transform-class-properties"
   ],
   "env": {
     "development": {
-      "presets": ["es2015-rollup", "power-assert"]
-    },
-    "production": {
-      "presets": ["es2015-rollup"]
+      "presets": ["power-assert"]
     }
   }
 }
