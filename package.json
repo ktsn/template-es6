@@ -60,6 +60,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-replace": "^1.1.1",
     "rollup-watch": "^2.5.0",
-    "testem": "^1.6.0"
+    "testem": "^1.6.0",
+    "uglifyjs": "^2.4.10"
   }
 }
