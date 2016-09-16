@@ -22,7 +22,10 @@
   "scripts": {
     "prepublish": "npm run release",
     "clean": "rm -rf dist .tmp",
-    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "build": "run-p build:cjs build:dev build:prod",
+    "build:cjs": "rollup -c scripts/rollup.config.js -f cjs -o dist/template-es6.cjs.js",
+    "build:dev": "cross-env NODE_ENV=development rollup -c scripts/rollup.config.js -f umd -o dist/template-es6.js",
+    "build:prod": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js -f umd | uglifyjs -mc warnings=false --comments -o dist/template-es6.min.js",
     "build:test": "rollup -c scripts/rollup.config.test.js",
     "watch:test": "node scripts/test-dev.js",
     "flow": "flow check",
@@ -56,8 +59,8 @@
     "rollup-plugin-node-globals": "^1.0.7",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0",
-    "testem": "^1.6.0"
+    "testem": "^1.6.0",
+    "uglifyjs": "^2.4.10"
   }
 }
