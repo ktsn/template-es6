@@ -1,4 +1,3 @@
-/* eslint-env node */
 const path = require('path')
 const glob = require('glob')
 
@@ -9,8 +8,8 @@ module.exports = {
     filename: 'test.js'
   },
   resolve: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js']
+    modules: ['node_modules'],
+    extensions: ['.js']
   },
   module: {
     loaders: [

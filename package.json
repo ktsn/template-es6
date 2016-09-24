@@ -26,8 +26,8 @@
     "build:cjs": "rollup -c scripts/rollup.config.js -f cjs -o dist/template-es6.cjs.js",
     "build:dev": "cross-env NODE_ENV=development rollup -c scripts/rollup.config.js -f umd -o dist/template-es6.js",
     "build:prod": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js -f umd | uglifyjs -mc warnings=false --comments -o dist/template-es6.min.js",
-    "build:test": "webpack --config scripts/webpack.config.test.js",
-    "watch:test": "webpack -w --config scripts/webpack.config.test.js",
+    "build:test": "cross-env NODE_ENV=test webpack --config scripts/webpack.config.test.js",
+    "watch:test": "cross-env NODE_ENV=test webpack -w --config scripts/webpack.config.test.js",
     "flow": "flow check",
     "lint": "eslint --fix \"@(src|test|scripts)/**/*.js\"",
     "testem": "testem",
@@ -58,6 +58,6 @@
     "rollup-plugin-replace": "^1.1.1",
     "testem": "^1.6.0",
     "uglifyjs": "^2.4.10",
-    "webpack": "^1.13.0"
+    "webpack": "^2.1.0-beta.25"
   }
 }
