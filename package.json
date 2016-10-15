@@ -9,7 +9,7 @@
     "ECMAScript"
   ],
   "license": "MIT",
-  "main": "dist/template-es6.common.js",
+  "main": "dist/template-es6.cjs.js",
   "files": [
     "dist"
   ],
