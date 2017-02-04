@@ -58,6 +58,6 @@
     "rollup-plugin-replace": "^1.1.1",
     "testem": "^1.6.0",
     "uglifyjs": "^2.4.10",
-    "webpack": "2.2.0"
+    "webpack": "^2.2.0"
   }
 }
