@@ -20,7 +20,7 @@
     "url": "https://github.com/ktsn/template-es6.git"
   },
   "scripts": {
-    "prepublish": "npm run release",
+    "prepublishOnly": "npm run release",
     "clean": "rm -rf dist .tmp",
     "build": "run-p build:cjs build:dev build:prod",
     "build:cjs": "rollup -c scripts/rollup.config.js -f cjs -o dist/template-es6.cjs.js",
