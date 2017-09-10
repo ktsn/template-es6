@@ -12,7 +12,7 @@ const banner = `/*!
  * ${meta.homepage}/blob/master/LICENSE
  */`
 
-const moduleName = 'Lib'
+const name = 'Lib'
 
 const plugins = [
   babel({
@@ -28,8 +28,10 @@ if (process.env.NODE_ENV) {
 }
 
 module.exports = {
-  entry: 'src/index.js',
-  plugins,
-  moduleName,
-  banner
+  input: 'src/index.js',
+  output: {
+    name,
+    banner
+  },
+  plugins
 }
