@@ -1,6 +1,8 @@
 const path = require('path')
 const glob = require('glob')
 
+process.env.BABEL_ENV = 'test'
+
 module.exports = {
   entry: glob.sync(path.resolve(__dirname, '../test/**/*.js')),
   output: {
@@ -13,7 +15,11 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
     ]
   },
   devtool: 'source-map'
