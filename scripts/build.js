@@ -86,7 +86,7 @@ function write(config, bundle, prod) {
   }
 }
 
-function minify({ code, map }) {
+function minify({ code }) {
   return uglify.minify(code, {
     compress: {
       toplevel: true
