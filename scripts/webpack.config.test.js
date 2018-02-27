@@ -14,7 +14,7 @@ module.exports = {
     extensions: ['.js']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -22,5 +22,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map'
+  mode: 'development',
+  devtool: 'cheap-module-eval-source-map'
 }
